@@ -378,28 +378,3 @@ app.listen(
     );
   }
 );
-
-// error - working well in localhost but in render there is error
-
-==> Deploying...
-==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
-==> Running 'node server.js'
-◇ injected env (0) from .env
-Server running on port 10000
-==> Your service is live 🎉
-==> 
-==> ///////////////////////////////////////////////////////////
-==> 
-==> Available at your primary URL https://render-node-mailer.onrender.com
-==> 
-==> ///////////////////////////////////////////////////////////
-[mailer] Failed: Error: Connection timeout
-    at SMTPConnection._formatError (file:///opt/render/project/src/node_modules/nodemailer/dist/esm/smtp-connection/index.js:779:19)
-    at SMTPConnection._onError (file:///opt/render/project/src/node_modules/nodemailer/dist/esm/smtp-connection/index.js:761:20)
-    at SMTPConnection._onConnectionError (file:///opt/render/project/src/node_modules/nodemailer/dist/esm/smtp-connection/index.js:321:18)
-    at Timeout.<anonymous> (file:///opt/render/project/src/node_modules/nodemailer/dist/esm/smtp-connection/index.js:304:18)
-    at listOnTimeout (node:internal/timers:685:17)
-    at process.processTimers (node:internal/timers:618:7) {
-  code: 'ETIMEDOUT',
-  command: 'CONN'
-}
