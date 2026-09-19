@@ -21,14 +21,17 @@ app.use(express.json());
 
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
-  port: 465,
-  secure: true,
+  port: 587,
+  secure: false,
 
   family: 4,
 
   auth: {
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASS,
+  },
+  tls: {
+    rejectUnauthorized: false,
   },
 });
 
@@ -375,6 +378,5 @@ app.listen(
     console.log(
       `Server running on port ${PORT}`
     );
-
   }
 );
